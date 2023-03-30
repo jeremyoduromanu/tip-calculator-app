@@ -14,7 +14,7 @@ function calculate() {
   const billTotal = Number(billTotalInput.value);
   const numPeople = Number(numPeopleInput.value);
 
-  if (isNaN(billTotal) || isNaN(numPeople)) {
+  if (isNaN(billTotal) || isNaN(numPeople) || billTotal <= 0 || numPeople <= 0) {
     alert('Please enter valid numbers for Bill Total and Number of People.');
     return;
   }
@@ -34,6 +34,7 @@ function calculate() {
   tipAmountOutput.textContent = `$${tipAmountPerPerson.toFixed(2)}`;
   totalAmountOutput.textContent = `$${totalAmountPerPerson.toFixed(2)}`;
 }
+
 
 function reset() {
   billTotalInput.value = '';
