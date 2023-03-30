@@ -49,4 +49,9 @@ tipPercentageSelect.addEventListener('change', () => {
   if (tipPercentageSelect.value === 'custom') {
     customTipDiv.style.display = 'block';
   } else {
-    customTipDiv
+    customTipDiv.style.display = 'none';
+  }
+});
+
+calculateBtn.addEventListener('click', calculate);
+resetBtn.addEventListener('click', reset);
