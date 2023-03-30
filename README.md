@@ -1,4 +1,5 @@
 # Frontend Mentor - Tip calculator app
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6557f2fd-79c2-40b6-82ea-10dd81fd7df5/deploy-status)](https://app.netlify.com/sites/femtipcalculator2023/deploys)
 
 ![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
 
