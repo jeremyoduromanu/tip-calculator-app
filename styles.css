@@ -1,4 +1,15 @@
+/* css variables  */
+:root {
+  --primary-color: hsl(172, 67%, 45%);
+  --background-color: hsl(0, 0%, 100%);
+  --secondary-color: hsl(183, 100%, 15%);
+  --header-bg-color: hsl(184, 14%, 56%);
+  --third-color: hsl(185, 41%, 84%);
+  --icon-color: hsl(186, 14%, 43%);
+  --fourth-color: hsl(189, 41%, 97%);
 
+
+}
 
 /* CSS Reset */
 
