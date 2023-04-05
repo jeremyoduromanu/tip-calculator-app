@@ -1,7 +1,7 @@
 const billTotalInput = document.getElementById('bill-total');
 const tipPercentageButtons = document.querySelectorAll('.tip-percentage button');
 const customTipDiv = document.getElementById('custom-tip');
-const customTipInput = document.getElementById('custom-tip-percentage');
+const customTipInput = document.querySelector('.tip-percentage input');
 const numPeopleInput = document.getElementById('num-people');
 const calculateBtn = document.getElementById('calculate-btn');
 const resetBtn = document.getElementById('reset-btn');
@@ -44,7 +44,7 @@ function reset() {
     }
   });
   customTipDiv.style.display = 'none';
-  customTipInput.value = '0';
+  customTipInput.value = '';
   numPeopleInput.value = '';
   tipAmountOutput.textContent = '';
   totalAmountOutput.textContent = '';
