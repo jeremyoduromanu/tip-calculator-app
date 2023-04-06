@@ -1,7 +1,7 @@
 const billTotalInput = document.getElementById('bill-total');
-const tipPercentageSelect = document.getElementById('tip-percentage');
+const tipPercentageButtons = document.querySelectorAll('.tip-percentage button');
 const customTipDiv = document.getElementById('custom-tip');
-const customTipInput = document.getElementById('custom-tip-percentage');
+const customTipInput = document.querySelector('.tip-percentage input');
 const numPeopleInput = document.getElementById('num-people');
 const calculateBtn = document.getElementById('calculate-btn');
 const resetBtn = document.getElementById('reset-btn');
@@ -20,10 +20,10 @@ function calculate() {
   }
 
   let calculatedTipPercentage = tipPercentage;
-  if (tipPercentageSelect.value === 'custom') {
+  if (customTipDiv.style.display !== 'none') {
     calculatedTipPercentage = Number(customTipInput.value) / 100;
   } else {
-    calculatedTipPercentage = Number(tipPercentageSelect.value);
+    calculatedTipPercentage = Number(document.querySelector('.tip-percentage button.selected').value);
   }
 
   const tipAmount = billTotal * calculatedTipPercentage;
@@ -35,24 +35,32 @@ function calculate() {
   totalAmountOutput.textContent = `$${totalAmountPerPerson.toFixed(2)}`;
 }
 
-
 function reset() {
   billTotalInput.value = '';
-  tipPercentageSelect.value = '0.15';
+  tipPercentageButtons[2].classList.add('selected');
+  tipPercentageButtons.forEach(button => {
+    if (button.value !== '0.15') {
+      button.classList.remove('selected');
+    }
+  });
   customTipDiv.style.display = 'none';
-  customTipInput.value = '0';
+  customTipInput.value = '';
   numPeopleInput.value = '';
   tipAmountOutput.textContent = '';
   totalAmountOutput.textContent = '';
 }
 
-tipPercentageSelect.addEventListener('change', () => {
-  if (tipPercentageSelect.value === 'custom') {
+function handleTipPercentageButtonClick(event) {
+  tipPercentageButtons.forEach(button => button.classList.remove('selected'));
+  event.target.classList.add('selected');
+
+  if (event.target.value === 'custom') {
     customTipDiv.style.display = 'block';
   } else {
     customTipDiv.style.display = 'none';
   }
-});
+}
 
+tipPercentageButtons.forEach(button => button.addEventListener('click', handleTipPercentageButtonClick));
 calculateBtn.addEventListener('click', calculate);
 resetBtn.addEventListener('click', reset);
