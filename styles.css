@@ -40,8 +40,7 @@ body {
 }
 
 .main-container{
-  /* border-radius: px 20px 0 0; */
-  height: 80vh;
+  border-radius: px 20px 0 0;
   padding: 5% 5%;
   border-radius: 20px;
 }
@@ -163,3 +162,56 @@ body {
 .people-input input:focus {
   outline: none;
 }
+
+
+.tip-amount-container{
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+}
+
+.tipAmount, .totalAmount{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30%;
+}
+
+.tip-amount-txt{
+  color: var(--background-color);
+  font-size: 18px;
+}
+
+.tip-amount-txt:first-child{
+  margin-bottom: 20px;
+}
+
+.tip-amount-txt span{
+  font-size: 15px;
+  color: var(--header-bg-color);
+}
+
+#total-amount, #tip-amount{
+  font-size: 25px;
+  color: var(--primary-color);
+}
+
+.tip-btn-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.tip-btn-container button{
+  padding: 20px;
+  width: 100%;
+  font-size: 20px ;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 10px;
+  background: var(--primary-color);
+  font-family: inherit;
+}
+

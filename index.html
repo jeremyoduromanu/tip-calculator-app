@@ -57,17 +57,23 @@
         <input type="number" id="num-people">
       </div>
 
-      <button id="calculate-btn">Calculate</button>
-      <button id="reset-btn">Reset</button>
 
-      <div class="tipAmount">
-        <label for="tip-amount" class="input__label--tipAmount">Tip Amount per person:</label>
-        <span id="tip-amount"></span>
-      </div>
+      <div class="tip-amount-container">
+        <div class="tipAmount">
+          <label for="tip-amount" class="input__label--tipAmount tip-amount-txt">Tip Amount <br><span>/
+              person</span></label>
+          <span id="tip-amount"></span>
+        </div>
 
-      <div class="totalAmount">
-        <label for="total-amount" class="input__label--totalAmount">Total per person:</label>
-        <span id="total-amount"></span>
+        <div class="totalAmount">
+          <label for="total-amount" class="input__label--totalAmount tip-amount-txt">Total <br><span>/
+              person</span></label>
+          <span id="total-amount"></span>
+        </div>
+        <div class="tip-btn-container">
+          <button id="calculate-btn">Calculate</button>
+          <button id="reset-btn">Reset</button>
+        </div>
       </div>
     </div>
   </main>
