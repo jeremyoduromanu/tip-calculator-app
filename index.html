@@ -21,43 +21,47 @@
     <h1 class="title__app">SPLI<br>TTER</h1>
   </div>
   <main class="main-container">
-    <div class="bill-container">
-      <label for="bill-total" class="input__label--billTotal bill-total">Bill</label>
-      <div class="bill-input">
-        <div class="bill-img">
-          <img src="./images/icon-dollar.svg" alt="">
+    <div class="input-container-all">
+      <div class="bill-container">
+        <label for="bill-total" class="input__label--billTotal bill-total">Bill</label>
+        <div class="bill-input">
+          <div class="bill-img">
+            <img src="./images/icon-dollar.svg" alt="">
+          </div>
+          <input type="number" id="bill-total">
         </div>
-        <input type="number" id="bill-total">
+      </div>
+      <div class="tip-container">
+        <label for="tip-percentage" class="input__label--tipPercentage tip-label">Select Tip %:</label>
+        <div class="tip-percentage">
+          <button value="0.05" class="button5">5%</button>
+          <button value="0.1" class="button1">10%</button>
+          <button value="0.15" class="button15">15%</button>
+          <button value="0.25" class="button25">25%</button>
+          <button value="0.5" class="button50">50%</button>
+          <input type="number" min="0" max="100" step="1" placeholder="Custom">
+        </div>
+      </div>
+
+
+      <div class="people-container">
+        <div id="custom-tip" style="display:none;" class="custom-tip">
+          <label for="custom-tip-percentage" class="input__label--customTipPercentage">Custom Tip %:</label>
+          <input type="number" id="custom-tip-percentage" value="0">
+        </div>
+
+        <label for="num-people" class="input__label--numberOfPeople num-people">Number of People:</label>
+        <div class="people-input">
+          <div class="people-img">
+            <img src="./images/icon-person.svg" alt="">
+          </div>
+          <input type="number" id="num-people">
+        </div>
+
       </div>
     </div>
-    <div class="tip-container">
-      <label for="tip-percentage" class="input__label--tipPercentage tip-label">Select Tip %:</label>
-      <div class="tip-percentage">
-        <button value="0.05" class="button5">5%</button>
-        <button value="0.1" class="button1">10%</button>
-        <button value="0.15" class="button15">15%</button>
-        <button value="0.25" class="button25">25%</button>
-        <button value="0.5" class="button50">50%</button>
-        <input type="number" min="0" max="100" step="1" placeholder="Custom">
-      </div>
-    </div>
 
-
-    <div class="people-container">
-      <div id="custom-tip" style="display:none;" class="custom-tip">
-        <label for="custom-tip-percentage" class="input__label--customTipPercentage">Custom Tip %:</label>
-        <input type="number" id="custom-tip-percentage" value="0">
-      </div>
-
-      <label for="num-people" class="input__label--numberOfPeople num-people">Number of People:</label>
-      <div class="people-input">
-        <div class="people-img">
-          <img src="./images/icon-person.svg" alt="">
-        </div>
-        <input type="number" id="num-people">
-      </div>
-
-
+    <div class="display-container-all">
       <div class="tip-amount-container">
         <div class="tipAmount">
           <label for="tip-amount" class="input__label--tipAmount tip-amount-txt">Tip Amount <br><span>/
