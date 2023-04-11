@@ -220,7 +220,7 @@ body {
 @media only screen and (min-width: 1000px){
   body {
       margin: 0;
-      padding: 0 0 10vh 0;
+      padding: 0;
       font-family: 'Space Mono', monospace;
       max-height: 100vh;
       align-items: center;
@@ -309,4 +309,13 @@ body {
     .bill-input input:focus {
       outline: none;
     }
+
+        .people-input {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          /* width: 100%; */
+          padding: 10px;
+          gap: 60%;
+        }
 } 
