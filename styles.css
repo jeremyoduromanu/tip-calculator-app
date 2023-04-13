@@ -1,12 +1,321 @@
+*{
+  padding: 0;
+  margin: 0;
+}
 
+/* css variables  */
+:root {
+  --primary-color: hsl(172, 67%, 45%);
+  --background-color: hsl(0, 0%, 100%);
+  --secondary-color: hsl(183, 100%, 15%);
+  --header-bg-color: hsl(184, 14%, 56%);
+  --third-color: hsl(185, 41%, 84%);
+  --icon-color: hsl(186, 14%, 43%);
+  --fourth-color: hsl(189, 41%, 97%);
+
+
+}
 
 /* CSS Reset */
 
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Space Mono', monospace;
+}
+
+/* working on header  */
+.app-title{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--third-color);
+}
+
+.app-title h1{
+  font-size: 24px;
+  letter-spacing: 5px;
+  color: var(--secondary-color);
+}
+
+.main-container{
+  border-radius: px 20px 0 0;
+  padding: 5% 5%;
+  border-radius: 20px;
+}
+
+/* bill container  */
+.bill-container{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.bill-container .bill-total{
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+.bill-input{
+  padding: 10px;
+  display: flex;
+  /* width: 100%; */
+  justify-content: space-between;
+  align-items: center;
+  gap: 60%;
+}
+
+.bill-container .bill-img{
+  width: 10%;
+}
+
+.bill-input input{
+  border: none;
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-size: 24px;
+  width: 30%;
+}
+
+.bill-input input:focus{
+  outline: none;
 }
 /* End of Reset  */
 
-.attribution { font-size: 11px; text-align: center; }
- .attribution a { color: hsl(228, 45%, 44%); }
+/* tip inputting section  */
+.tip-container{
+  padding-bottom: 20px;
+}
+
+.tip-container .tip-label{
+  font-size: 18px;
+  color: var(--secondary-color);
+}
+
+.tip-container .tip-percentage{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.tip-container .tip-percentage button{
+  padding: 10px 0px;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  border: none;
+  color: var(--fourth-color);
+  font-size: 24px;
+  font-family: inherit;
+  transition: background-color, color .5s ease;
+}
+
+.tip-container .tip-percentage button:hover{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.tip-container .tip-percentage input{
+  border: none;
+  text-align: right;
+  padding: 0 20px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 24px;
+}
+
+.tip-container .tip-percentage input::placeholder{
+  color: var(--secondary-color);
+  font-family: inherit;
+  font-size: 24px;
+}
+
+.people-container .num-people{
+  color: var(--secondary-color);
+  font-size: 18px;
+}
+
+.people-input{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 100%; */
+  padding: 10px;
+  gap: 60%;
+}
+
+.people-input .people-img{
+  width: 10%;
+}
+
+.people-input input {
+  border: none;
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-size: 24px;
+  width: 20%;
+  text-align: right;
+}
+
+.people-input input:focus {
+  outline: none;
+}
+
+
+.tip-amount-container{
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+}
+
+.tipAmount, .totalAmount{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30%;
+}
+
+.tip-amount-txt{
+  color: var(--background-color);
+  font-size: 18px;
+}
+
+.tip-amount-txt:first-child{
+  margin-bottom: 20px;
+}
+
+.tip-amount-txt span{
+  font-size: 15px;
+  color: var(--header-bg-color);
+}
+
+#total-amount, #tip-amount{
+  font-size: 25px;
+  color: var(--primary-color);
+}
+
+.tip-btn-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.tip-btn-container button{
+  padding: 20px;
+  width: 100%;
+  font-size: 20px ;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 10px;
+  background: var(--primary-color);
+  font-family: inherit;
+}
+
+
+@media only screen and (min-width: 1000px){
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Space Mono', monospace;
+      max-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--third-color);
+    }
+
+    /* working on header  */
+    .app-title {
+      height: 20vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--third-color);
+    }
+  
+    .app-title h1 {
+      font-size: 24px;
+      letter-spacing: 5px;
+      color: var(--secondary-color);
+    }
+  
+    .main-container {
+      border-radius: px 20px 0 0;
+      padding: 5% 5%;
+      border-radius: 20px;
+      background-color: var(--background-color);
+      width: 50%;
+      margin: auto;
+      height: fit-content;
+      display: flex;
+      justify-content: space-between;
+      gap: 10%;
+    }
+
+    .input-container-all, .display-container-all{
+      width: 45%;
+    }
+
+        .tip-amount-container {
+          padding: 20px 20px 0 20px;
+          background-color: var(--secondary-color);
+          border-radius: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          height: 100%;
+          gap: 10%;
+        }
+
+    
+    .bill-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      justify-content: space-around;
+    }
+  
+    .bill-container .bill-total {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--secondary-color);
+    }
+  
+    .bill-input {
+      padding: 10px;
+      display: flex;
+      /* width: 100%; */
+      justify-content: space-between;
+      align-items: center;
+      gap: 60%;
+    }
+  
+    .bill-container .bill-img {
+      width: 10%;
+    }
+  
+    .bill-input input {
+      border: none;
+      font-weight: 700;
+      color: var(--secondary-color);
+      font-size: 24px;
+      width: 30%;
+    }
+  
+    .bill-input input:focus {
+      outline: none;
+    }
+
+        .people-input {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          /* width: 100%; */
+          padding: 10px;
+          gap: 60%;
+        }
+} 

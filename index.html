@@ -7,56 +7,83 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Tip calculator app</title>
 
 </head>
 
 <body>
 
-  <div>
-    <h2 class="title__app">Tip Calculator</h2>
-    <label for="bill-total" class="input__label--billTotal">Bill Total:</label>
-    <input type="number" id="bill-total">
-  
-    <label for="tip-percentage" class="input__label--tipPercentage">Select Tip %:</label>
-<div class="tip-percentage">
-  <button value="0.05" class="button5">5%</button>
-  <button value="0.1" class="button1">10%</button>
-  <button value="0.15" class="button15">15%</button>
-  <button value="0.25" class="button25">25%</button>
-  <button value="0.5" class="button50">50%</button>
-  <input type="number" min="0" max="100" step="1" placeholder="Custom">
-</div>
-
-  
-    <div id="custom-tip" style="display:none;">
-      <label for="custom-tip-percentage" class="input__label--customTipPercentage">Custom Tip %:</label>
-      <input type="number" id="custom-tip-percentage" value="0">
-    </div>
-  
-    <label for="num-people" class="input__label--numberOfPeople">Number of People:</label>
-    <input type="number" id="num-people">
-  
-    <button id="calculate-btn">Calculate</button>
-    <button id="reset-btn">Reset</button>
-  
-    <div class="tipAmount">
-      <label for="tip-amount" class="input__label--tipAmount">Tip Amount per person:</label>
-      <span id="tip-amount"></span>
-    </div>
-  
-    <div class="totalAmount">
-      <label for="total-amount" class="input__label--totalAmount">Total per person:</label>
-      <span id="total-amount"></span>
-    </div>
+  <div class="app-title">
+    <h1 class="title__app">SPLI<br>TTER</h1>
   </div>
+  <main class="main-container">
+    <div class="input-container-all">
+      <div class="bill-container">
+        <label for="bill-total" class="input__label--billTotal bill-total">Bill</label>
+        <div class="bill-input">
+          <div class="bill-img">
+            <img src="./images/icon-dollar.svg" alt="">
+          </div>
+          <input type="number" id="bill-total">
+        </div>
+      </div>
+      <div class="tip-container">
+        <label for="tip-percentage" class="input__label--tipPercentage tip-label">Select Tip %:</label>
+        <div class="tip-percentage">
+          <button value="0.05" class="button5">5%</button>
+          <button value="0.1" class="button1">10%</button>
+          <button value="0.15" class="button15">15%</button>
+          <button value="0.25" class="button25">25%</button>
+          <button value="0.5" class="button50">50%</button>
+          <input type="number" min="0" max="100" step="1" placeholder="Custom">
+        </div>
+      </div>
 
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">RE. Wilson</a>.
-  </div>
+      <div class="people-container">
+        <div id="custom-tip" style="display:none;" class="custom-tip">
+          <label for="custom-tip-percentage" class="input__label--customTipPercentage">Custom Tip %:</label>
+          <input type="number" id="custom-tip-percentage" value="0">
+        </div>
+
+        <label for="num-people" class="input__label--numberOfPeople num-people">Number of People:</label>
+        <div class="people-input">
+          <div class="people-img">
+            <img src="./images/icon-person.svg" alt="">
+          </div>
+          <input type="number" id="num-people">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="display-container-all">
+      <div class="tip-amount-container">
+        <div class="tipAmount">
+          <label for="tip-amount" class="input__label--tipAmount tip-amount-txt">Tip Amount <br><span>/
+              person</span></label>
+          <span id="tip-amount"></span>
+        </div>
+
+        <div class="totalAmount">
+          <label for="total-amount" class="input__label--totalAmount tip-amount-txt">Total <br><span>/
+              person</span></label>
+          <span id="total-amount"></span>
+        </div>
+        <div class="tip-btn-container">
+          <button id="calculate-btn">Calculate</button>
+          <button id="reset-btn">Reset</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
 </body>
 <script src="./app.js"></script>
 
