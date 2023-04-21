@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
@@ -25,7 +25,7 @@ body {
 }
 
 /* working on header  */
-.app-title{
+.app-title {
   height: 20vh;
   display: flex;
   justify-content: center;
@@ -33,32 +33,32 @@ body {
   background-color: var(--third-color);
 }
 
-.app-title h1{
+.app-title h1 {
   font-size: 24px;
   letter-spacing: 5px;
   color: var(--secondary-color);
 }
 
-.main-container{
+.main-container {
   border-radius: px 20px 0 0;
   padding: 5% 5%;
   border-radius: 20px;
 }
 
 /* bill container  */
-.bill-container{
+.bill-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-.bill-container .bill-total{
+.bill-container .bill-total {
   font-size: 18px;
   margin-bottom: 10px;
   color: var(--secondary-color);
 }
 
-.bill-input{
+.bill-input {
   padding: 10px;
   display: flex;
   /* width: 100%; */
@@ -66,14 +66,15 @@ body {
   align-items: center;
   gap: 60%;
   box-shadow: 0px 4px 4px 0px hsla(0, 0%, 0%, 0.25) inset;
-  border: 1px solid hsla(185, 41%, 84%, 1)
+  border: 1px solid hsla(185, 41%, 84%, 1);
+  background-color: var(--third-color);
 }
 
-.bill-container .bill-img{
+.bill-container .bill-img {
   width: 10%;
 }
 
-.bill-input input{
+.bill-input input {
   border: none;
   font-weight: 700;
   color: var(--secondary-color);
@@ -81,22 +82,23 @@ body {
   width: 30%;
 }
 
-.bill-input input:focus{
+.bill-input input:focus {
   outline: none;
 }
+
 /* End of Reset  */
 
 /* tip inputting section  */
-.tip-container{
+.tip-container {
   padding-bottom: 20px;
 }
 
-.tip-container .tip-label{
+.tip-container .tip-label {
   font-size: 18px;
   color: var(--secondary-color);
 }
 
-.tip-container .tip-percentage{
+.tip-container .tip-percentage {
   margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -104,7 +106,7 @@ body {
   gap: 20px;
 }
 
-.tip-container .tip-percentage button{
+.tip-container .tip-percentage button {
   padding: 10px 0px;
   border-radius: 5px;
   background-color: var(--secondary-color);
@@ -115,32 +117,32 @@ body {
   transition: background-color, color .5s ease;
 }
 
-.tip-container .tip-percentage button:hover{
+.tip-container .tip-percentage button:hover {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 
-.tip-container .tip-percentage input{
+.tip-container .tip-percentage input {
   border: none;
   text-align: right;
   padding: 0 20px;
-    font-weight: 700;
-    color: var(--secondary-color);
-    font-size: 24px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-size: 24px;
 }
 
-.tip-container .tip-percentage input::placeholder{
+.tip-container .tip-percentage input::placeholder {
   color: var(--secondary-color);
   font-family: inherit;
   font-size: 24px;
 }
 
-.people-container .num-people{
+.people-container .num-people {
   color: var(--secondary-color);
   font-size: 18px;
 }
 
-.people-input{
+.people-input {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -149,7 +151,7 @@ body {
   gap: 60%;
 }
 
-.people-input .people-img{
+.people-input .people-img {
   width: 10%;
 }
 
@@ -167,49 +169,51 @@ body {
 }
 
 
-.tip-amount-container{
+.tip-amount-container {
   padding: 20px;
   background-color: var(--secondary-color);
   border-radius: 20px;
 }
 
-.tipAmount, .totalAmount{
+.tipAmount,
+.totalAmount {
   display: flex;
   justify-content: space-between;
   width: 100%;
   gap: 30%;
 }
 
-.tip-amount-txt{
+.tip-amount-txt {
   color: var(--background-color);
   font-size: 18px;
 }
 
-.tip-amount-txt:first-child{
+.tip-amount-txt:first-child {
   margin-bottom: 20px;
 }
 
-.tip-amount-txt span{
+.tip-amount-txt span {
   font-size: 15px;
   color: var(--header-bg-color);
 }
 
-#total-amount, #tip-amount{
+#total-amount,
+#tip-amount {
   font-size: 25px;
   color: var(--primary-color);
 }
 
-.tip-btn-container{
+.tip-btn-container {
   display: flex;
   width: 100%;
   justify-content: space-between;
   gap: 20px;
 }
 
-.tip-btn-container button{
+.tip-btn-container button {
   padding: 20px;
   width: 100%;
-  font-size: 20px ;
+  font-size: 20px;
   text-transform: uppercase;
   color: var(--secondary-color);
   border: none;
@@ -219,105 +223,112 @@ body {
 }
 
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 1000px) {
   body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Space Mono', monospace;
-      max-height: 100vh;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--third-color);
-    }
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+    max-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--third-color);
+  }
 
-    /* working on header  */
-    .app-title {
-      height: 20vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: var(--third-color);
-    }
-  
-    .app-title h1 {
-      font-size: 24px;
-      letter-spacing: 5px;
-      color: var(--secondary-color);
-    }
-  
-    .main-container {
-      border-radius: px 20px 0 0;
-      padding: 5% 5%;
-      border-radius: 20px;
-      background-color: var(--background-color);
-      width: 50%;
-      margin: auto;
-      height: fit-content;
-      display: flex;
-      justify-content: space-between;
-      gap: 10%;
-    }
+  /* working on header  */
+  .app-title {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--third-color);
+  }
 
-    .input-container-all, .display-container-all{
-      width: 45%;
-    }
+  .app-title h1 {
+    font-size: 24px;
+    letter-spacing: 5px;
+    color: var(--secondary-color);
+  }
 
-        .tip-amount-container {
-          padding: 20px 20px 0 20px;
-          background-color: var(--secondary-color);
-          border-radius: 20px;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          height: 100%;
-          gap: 10%;
-        }
+  .main-container {
+    border-radius: px 20px 0 0;
+    padding: 5% 5%;
+    border-radius: 20px;
+    background-color: var(--background-color);
+    width: 50%;
+    margin: auto;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+  }
 
-    
-    .bill-container {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 20px;
-      justify-content: space-around;
-    }
-  
-    .bill-container .bill-total {
-      font-size: 18px;
-      margin-bottom: 10px;
-      color: var(--secondary-color);
-    }
-  
-    .bill-input {
-      padding: 10px;
-      display: flex;
-      /* width: 100%; */
-      justify-content: space-between;
-      align-items: center;
-      gap: 60%;
-    }
-  
-    .bill-container .bill-img {
-      width: 10%;
-    }
-  
-    .bill-input input {
-      border: none;
-      font-weight: 700;
-      color: var(--secondary-color);
-      font-size: 24px;
-      width: 30%;
-    }
-  
-    .bill-input input:focus {
-      outline: none;
-    }
+  .input-container-all,
+  .display-container-all {
+    width: 45%;
 
-        .people-input {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          /* width: 100%; */
-          padding: 10px;
-          gap: 60%;
-        }
-} 
+  }
+
+  .tip-amount-container {
+    padding: 20px 20px 0 20px;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    gap: 10%;
+  }
+
+
+  .bill-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    justify-content: space-around;
+  }
+
+  .bill-container .bill-total {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+  }
+
+  .bill-input {
+    padding: 10px;
+    display: flex;
+    /* width: 100%; */
+    justify-content: space-between;
+    align-items: center;
+    gap: 60%;
+  }
+
+  .bill-container .bill-img {
+    width: 10%;
+  }
+
+  .bill-input input {
+    border: none;
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 24px;
+    width: 30%;
+  }
+
+  .bill-input input:focus {
+    outline: none;
+  }
+
+  .people-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 100%; */
+    padding: 10px;
+    gap: 60%;
+  }
+}
+
+input[type="number"] {
+  background-color: var(--third-color);
+  border: 1px solid hsla(185, 41%, 84%, 1);
+}
