@@ -331,4 +331,5 @@ body {
 input[type="number"] {
   background-color: var(--third-color);
   border: 1px solid hsla(185, 41%, 84%, 1);
+  border-radius: 4px;
 }
