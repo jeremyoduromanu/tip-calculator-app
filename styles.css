@@ -254,9 +254,9 @@ body {
     padding: 5% 5%;
     border-radius: 20px;
     background-color: var(--background-color);
-    width: 386px;
+    width: 50%;
     margin: auto;
-    height: 243px;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
     gap: 10%;
