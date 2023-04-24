@@ -11,13 +11,16 @@ const totalAmountOutput = document.getElementById('total-amount');
 let tipPercentage = 0.15;
 
 function calculate() {
-  const billTotal = Number(billTotalInput.value);
+  let billTotal = Number(billTotalInput.value);
   const numPeople = Number(numPeopleInput.value);
 
   if (isNaN(billTotal) || isNaN(numPeople) || billTotal <= 0 || numPeople <= 0) {
     alert('Please enter valid numbers for Bill Total and Number of People.');
     return;
   }
+
+  // Remove 15% tax from bill total
+  billTotal = billTotal / 1.15;
 
   let calculatedTipPercentage = tipPercentage;
   if (customTipDiv.style.display !== 'none') {
