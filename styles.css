@@ -336,14 +336,18 @@ input[type="number"] {
   border-radius: 4px;
 }
 
-.tip-btn-container button {
-  padding: 20px;
-  width: 58%;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: var(--secondary-color);
-  border: none;
-  border-radius: 10px;
-  background: var(--primary-color);
-  font-family: inherit;
+.tip-btn-container {
+  display: flex;
+  justify-content: space-between;
 }
+
+
+  .tip-btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+.tip-btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
